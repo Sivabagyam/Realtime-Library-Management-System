@@ -20,12 +20,12 @@ public class BookController {
 		this.service=service;
 	}
 	
-	@GetMapping("/books")
+	@GetMapping("/getbooks")
     public List<Book> getbooks(){
 		return service.getbooks();
 	}
 	
-	@PostMapping("/books")
+	@PostMapping("/addbooks")
 	public void addbooks(@RequestBody Book book) {
 	 service.addbooks(book);	
 	}

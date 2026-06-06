@@ -9,6 +9,8 @@ import com.sivvu.membermodel.Member;
 public interface MemberRepository extends JpaRepository <Member,Integer>{
 
 	Member findByMemberEmailAndMemberPassword(String memberEmail, String memberPassword);
+
+	Member findMemberByMemberName(String memberName);
      
 	
 
