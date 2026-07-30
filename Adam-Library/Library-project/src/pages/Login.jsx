@@ -1,6 +1,8 @@
 import "../styles/login.css";
 import {Link} from 'react-router-dom';
+import useFetch from "../useFetch";
 function Login(){
+       
     return(<>
     <div className="login-page">
       <div className="container">
@@ -39,7 +41,7 @@ function Login(){
     <label className="form-check-label" htmlfor="exampleCheck1">I agree to share my details</label>
   </div>
  
-  <button type="submit" className="btn btn-primary">Create Account</button>
+  <button type="submit" className="btn btn-primary" onClick={()=>useFetch("http://localhost:8080/member/addmembers")}>Create Account</button>
    <div className="signup">Already Registered?<Link to='/'>login</Link></div>
 </form>
   </div>

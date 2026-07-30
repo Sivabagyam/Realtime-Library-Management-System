@@ -83,3 +83,24 @@
    
 
 }
+.card{
+    min-height:500px;
+    border-radius:25px;
+}
+.card-img-top{
+    max-height:350px;
+}
+.pageno{
+    border:1px solid black;
+    
+    text-align: center;
+    position:fixed;
+    bottom:0;
+   margin-bottom:1%;
+   max-width: 20px !important;
+   
+}
+.pageno:hover{
+    background-color:black;
+    color:white;
+}
