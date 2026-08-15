@@ -1,39 +1,121 @@
-#Realtime-Library-Mangement-System
-##Status
-    This project is currently under development.
-##Description
-    This is a Java-based web application designed to manage:
-    -books
-    -members
-    -borrowing records.
-##Tech Stack
-     -Java
-     -JDBC
-     -MySQL
-##How to Run (Current Version)
-###Prerequisites:
-     -Java (JDK 8 or above)
-     -MySQL installed
-     -Eclipse / any Java IDE
-###Steps to Run:
-1.Clone the repository
-  git clone https://github.com/your-username/project-name.git
-2.Open the project in Eclipse
-3.Set up the database:
-    -Create a MySQL database (e.g., library_db)
-    -Create required tables manually or using SQL script
-    -Update database username and password in the code
-4.Run the program
-    -Locate the main class (e.g., Main.java or Verify.java)
-    -Right-click → Run as Java Application
-5.Follow console instructions
-    -Enter ID, name, email, etc.
-##Note
-    -This is currently a console-based application
-    -Web features (Spring boot) will be added later 
-##Future Improvements
-    -Add REST APIs
-    -Integrate Springboot
-    -Improve UI using modern frameworks
-##Author
-     Sivabagyam
+# Library Management System
+
+A full-stack Library Management System developed using Java, Spring Boot, MySQL, and React. The application provides functionality for managing books, members, reservations, returns, and user profiles.
+
+## Features
+
+### Member Management
+- Member registration and verification
+- Member login
+- View member information
+- Profile management
+
+### Book Management
+- Add and manage books
+- Check book availability
+- Search for books
+- View book details
+- Paginated book listing
+
+### Reservation and Return
+- Reserve available books
+- Track reserved books
+- Return books
+- Update book availability
+
+### Frontend
+- Responsive React user interface
+- Component-based architecture
+- React Router navigation
+- REST API integration
+- Reusable components
+- Search and pagination
+
+## Technologies Used
+
+### Backend
+- Java
+- Spring Boot
+- Spring MVC
+- Spring Data JPA
+- Hibernate
+- REST APIs
+- Maven
+
+### Frontend
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Bootstrap
+
+### Database
+- MySQL
+
+### Tools
+- Git
+- GitHub
+- Postman
+- VS Code
+- Spring Tool Suite
+
+## Architecture
+
+React Frontend
+       |
+       v
+REST APIs
+       |
+       v
+Spring Boot
+       |
+       v
+Spring Data JPA / Hibernate
+       |
+       v
+MySQL
+
+## API Integration
+
+The React frontend communicates with the Spring Boot backend through REST APIs.
+
+Example endpoints:
+
+GET /library/getpagebooks?page=0&size=12
+
+GET /library/getbooks/{id}
+
+## Database
+
+MySQL is used for persistent data storage. Spring Data JPA and Hibernate are used for database operations and object-relational mapping.
+
+## Key Concepts Practiced
+
+- REST API development
+- Spring Boot application architecture
+- Dependency Injection
+- Spring Data JPA
+- Hibernate ORM
+- MySQL database integration
+- Pagination
+- React components
+- React Hooks
+- React Router
+- Frontend-backend integration
+- Git version control
+
+## Future Improvements
+
+- JWT-based authentication
+- Role-based authorization
+- Admin dashboard
+- Advanced book filtering
+- Email notifications
+- Docker deployment
+- Cloud deployment
+
+## Author
+
+Sivabagyam
+
+GitHub: https://github.com/Sivabagyam
