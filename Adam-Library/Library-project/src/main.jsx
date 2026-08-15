@@ -11,6 +11,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import Wholecard from './components/Wholecard.jsx'
 import Admindashnoard from './pages/Admindashnoard.jsx'
 import Adminedit from './components/Adminedit.jsx'
+import Adminadd from './components/Adminadd.jsx'
+import Profile from './pages/Profile.jsx'
 const router=createBrowserRouter([
   {
   path:'/',
@@ -35,8 +37,16 @@ const router=createBrowserRouter([
   },{
     path:'/adminedit/:id',
     element:<Adminedit/>
-
-  }
+},{
+  path:'/adminadd',
+  element:<Adminadd/>
+},{
+  path:'/profile',
+  element:<Profile/>
+}
+,{
+  path:'/profileedit'
+}
 ]
 
 }]);

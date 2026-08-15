@@ -13,6 +13,13 @@ function Adminbooklist() {
   
  return(
    <div>
+    
+        <form className="d-flex w-50 m-5" role="search">
+        <input className="form-control me-2" type="search" placeholder="Search Book" aria-label="Search"/>
+        <button className="btn btn-outline-success" type="submit">Search</button>
+        <button className="btn btn-outline-primary mx-3 add" onClick={()=>navigate('/adminadd')}>Add a book</button>
+      </form>
+      
     {
          booklists.length>0?(
         <div className="m-5 p-5"><table >
@@ -49,7 +56,7 @@ function Adminbooklist() {
                                 <button className="btn btn-primary m-3" onClick={()=>navigate('/adminedit/'+book.bookId)}>Edit</button>
                             </td>
                             <td>
-                                <button className="btn btn-danger m-3" >Delete</button>
+                                <button className="btn btn-danger m-3" onClick={()=>Deletebook(book.bookId)} >Delete</button>
                             </td>
 
                            </tr>

@@ -7,3 +7,14 @@
 .label{
     color:white;
 }
+.add{
+    min-width: 200px;
+}
+.adminadd{
+    background-color:#4E1859;
+    
+    
+}
+.input{
+    align-items: center !important;
+}

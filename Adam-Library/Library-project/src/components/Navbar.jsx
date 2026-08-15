@@ -14,7 +14,7 @@ function Navbar(){
   <div className="left">
      
          <span className="nav-item mx-5">
-          <Link to='/login' className="nav-home" >
+          <Link to='/' className="nav-home" >
             <i className="bi bi-house-heart-fill me-2"></i>
             <span>Home</span>
              </Link>
@@ -55,9 +55,9 @@ function Navbar(){
         </li>
         
         <li className="nav-item mx-5">
-          <Link to='/login' className="nav-link" >
+          <Link to='/profile' className="nav-link" >
            
-            <span>Recommended</span>
+           <i class="bi bi-person-circle"></i>
              </Link>
           
         </li>
