@@ -11,10 +11,39 @@ import jakarta.persistence.Id;
 public class Book {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	int bookId;
-	String bookTitle;
-	String bookAuthor;
-	int bookCapacity;
+	
+	private int bookId;
+	private String bookTitle;
+	private String bookAuthor;
+	private int bookCapacity;
+	private String bookImage;
+	private int bookPrice;
+	private String bookDescription;
+	public int getBookPrice() {
+		return bookPrice;
+	}
+	public void setBookPrice(int bookPrice) {
+		this.bookPrice = bookPrice;
+	}
+	public String getBookDescription() {
+		return bookDescription;
+	}
+	public void setBookDescription(String bookDescription) {
+		this.bookDescription = bookDescription;
+	}
+	private String bookCategory;
+	public String getBookCategory() {
+		return bookCategory;
+	}
+	public void setBookCategory(String bookCategory) {
+		this.bookCategory = bookCategory;
+	}
+	public String getBookImage() {
+		return bookImage;
+	}
+	public void setBookImage(String bookImage) {
+		this.bookImage = bookImage;
+	}
 	public int getBookId() {
 		return bookId;
 	}
