@@ -2,6 +2,7 @@ package com.sivvu.memberservice;
 
 import java.util.List;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.sivvu.bookmodel.Book;
@@ -13,13 +14,19 @@ import com.sivvu.memberrepository.MemberRepository;
 @Service
 public class MemberService {
 	private MemberRepository repo;
+	 private  PasswordEncoder passwordEncoder;
 	
-	public MemberService(MemberRepository repo) {
+	
+	public MemberService(MemberRepository repo,PasswordEncoder passwordEncoder) {
 		this.repo=repo;
+		this.passwordEncoder=passwordEncoder;
+		
 	}
 	
 
 	public Member addMembers(Member mem) {
+		 String encodedPassword = passwordEncoder.encode(mem.getMemberPassword());
+		 mem.setMemberPassword(encodedPassword);
 		
 		return repo.save(mem);
 	}
@@ -35,6 +42,12 @@ public class MemberService {
 		else {
 			return "Verification failed";
 		}
+	}
+
+
+	public List<Member> getMembers() {
+		// TODO Auto-generated method stub
+		return repo.findAll();
 	}
 
 }

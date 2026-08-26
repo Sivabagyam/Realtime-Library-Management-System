@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sivvu.membermodel.Member;
 import com.sivvu.memberservice.MemberService;
+import java.util.List;
 @CrossOrigin(origins="http://localhost:5173")
 @RestController
 @RequestMapping("/member")
@@ -27,6 +28,10 @@ public class MemberController {
 	@PostMapping("/verifymembers")
 	public String verifyMembers(@RequestParam String memberEmail,@RequestParam String memberPassword) {
 		return service.verifyMembers(memberEmail,memberPassword);
+	}
+	@GetMapping("/getmembers")
+	public List<Member> getMembers(){
+		  return service.getMembers();
 	}
 
 }
